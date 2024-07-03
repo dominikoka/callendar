@@ -1,0 +1,742 @@
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+
+:root {
+  --h1-title-font-size: 50px;
+  --week-day-font-size: 16px;
+  --font-family: '8BIT WONDER', sans-serif;
+  --font-size-active-event: 12px;
+  --event-font-size: 14px;
+}
+
+.body {
+  background-image: url('https://s1.ezgif.com/tmp/ezgif-1-ba993aee14.gif');
+  /*background-image: url("main/webapp/img/bckg.gif");*/
+
+  /*background-position-x: 50%;*/
+
+  background-size: 100% auto;
+
+  background-repeat: no-repeat;
+
+}
+
+
+.dark-mode {
+  body {
+    background-image: none;
+  }
+
+  .main_title {
+    background-image: none;
+  }
+
+  .calendar-container {
+    background-color: black;
+  }
+
+  .callenarBig_box {
+    margin-left: 10px;
+    /*background-image: url("https://i.pinimg.com/originals/63/a2/f0/63a2f02b22ccb7100371c2ecfdb69107.gif");*/
+    /*background-position-x: 50%;background-position-y: 50%;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+  }
+
+  #toggleDark {
+    color: white;
+  }
+
+  background-color: black;
+  background-image: url("https://j.gifs.com/yo1laA.gif") !important;
+  background-position-y: 0%;
+  background-position-x: 50%;
+  background-size: 58% !important;
+  background-repeat: no-repeat;
+
+  .event_btn {
+    color: red;
+  }
+
+  .draw-border {
+    box-shadow: inset 0 0 0 4px red;
+  }
+
+  .main_title {
+    color: red;
+  }
+
+  .callenarBig_box {
+    color: red;
+  }
+
+  .callendarBig_date {
+    color: red
+  }
+
+  .calendar-today-button {
+    background-color: red;
+  }
+
+  .calendar-day-active {
+    background-color: red;
+  }
+
+  .eventDetails {
+    /*padding: 13px;*/
+    /*border: 1px solid red;*/
+    border-radius: 37px;
+    background-image: url('https://i.pinimg.com/originals/bb/be/29/bbbe29c70fc115531d29cb0ec16fdeda.gif');
+    background-origin: content-box;
+  }
+
+  body {
+
+  }
+}
+
+.callendarMini, .calendar-months, .calendar-years, .calendar-today-button {
+  font-family: var(--font-family);
+}
+
+
+.halfHour_activeEvent {
+  cursor: pointer;
+  font-size: var(--font-size-active-event);
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 5px;
+}
+
+.callendarBig_date {
+  padding: 10px 0;
+}
+
+.main_title {
+  font-size: var(--h1-title-font-size);
+  padding: 25px 0 30px 0;
+  text-align: center;
+  font-family: '8BIT WONDER', sans-serif;
+  /*background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzdzNjdxNG1uODBjanN1cjcwMXBhNTl3YXk5dzdnczhkaXd4bmYwZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/326d5iOUoYY8N6uFPm/giphy.webp') no-repeat center center fixed;*/
+  /*background-size: cover;*/
+  /*color:white;*/
+  /*filter: invert(1);*/
+
+}
+
+.callendarBig_time {
+  height: 60px;
+}
+
+.activeEvent {
+  text-decoration: none;
+}
+
+/*.activeEvent:hover {*/
+/*  background-color: #525659;*/
+/*}*/
+
+.halfHour_activeEvent {
+  color: white;
+}
+
+.type0 {
+  background-color: darkorange;
+}
+
+.calendar-big {
+  flex: 1;
+}
+
+.callenarBig_box {
+  display: flex;
+}
+
+.callendarBig_el {
+  flex: 1;
+  font-size: var(--week-day-font-size);
+  font-family: var(--font-family);
+}
+
+.main_box {
+  max-width: 1600px;
+  margin: auto;
+}
+
+.calendar-day:hover {
+  background-color: midnightblue;
+  border-radius: 12px;
+  color: white;
+}
+
+.calendar-right-arrow:hover, .calendar-left-arrow:hover, .calendar-months:hover, .calendar-years:hover {
+  background-color: midnightblue;
+  color: white;
+}
+
+.type1 {
+  background-color: midnightblue;
+}
+
+.eventWindow_switch {
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+}
+
+.eventWindow_switchBtn {
+  cursor: pointer;
+}
+
+.eventDetails_title {
+  text-align: center;
+}
+
+.eventDetails_nameBox, .eventDetails_TimeBox, .eventDetails_EndTimeBox, .eventDetails_StartTimeBox, .eventDetails_location {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.eventDetails_StartTimeText, .eventDetails_EndTimeText {
+  text-align: left;
+}
+
+.eventDetails_msgDescEdit {
+  padding: 10px;
+  width: 400px;
+}
+
+.eventDetails_singleEmail {
+  display: flex;
+}
+
+.eventDetails_StartTimeText, .eventDetails_EndTimeText {
+  width: 95px;
+}
+
+.eventDetails_EndTimeEdit, .eventDetails_StartTimeEdit {
+  width: 292px;
+}
+
+/*.halfHour_activeEvent:hover {*/
+/*  background-color: red;*/
+/*  transition-delay: 0, 3s;*/
+/*}*/
+.CloseBtn, .btn_remove, .btn_edit {
+  background: #7C7C7C;
+  border-bottom: 6px inset rgba(0, 0, 0, .5);
+  border-left: 6px inset rgba(0, 0, 0, .5);
+  border-right: 6px inset rgba(255, 255, 255, .5);
+  border-top: 6px inset rgba(255, 255, 255, .5);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 60px;
+  text-transform: uppercase;
+  width: auto;
+
+  &:focus,
+  &:hover {
+    background: #BCBCBC;
+  }
+}
+
+.btn_remove {
+  background: #881400;
+
+  &:focus,
+  &:hover {
+    background: #A81000;
+  }
+}
+
+.btn_edit {
+  background: #0000BC;
+
+  &:focus,
+  &:hover {
+    background: #0000FC;
+  }
+}
+
+.halfHour {
+  height: 30px;
+}
+
+.eventDetails_btnCloseBox {
+  padding: 10px 0;
+  text-align: right;
+}
+
+.eventDetails_msgTitleEdit {
+  width: 400px;
+  padding: 10px 0;
+}
+
+.main_switch {
+  width: 30px;
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  cursor: pointer;
+}
+
+.calendar-container {
+  height: 150px;
+  width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+  padding: 31px 20px;
+  font-size: 10px;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+
+}
+
+.callenarBig_day {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.eventWindow_MessageBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventWindow, .eventDetails {
+  width: 400px;
+  font-size: var(--event-font-size);
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+}
+
+
+.eventWindow_nameInput, .eventWindow_locationInput, .eventWindow_startDateInput, .eventWindow_endDateInput {
+  width: 100%;
+}
+
+.eventWindow_box {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.eventDetails {
+  width: 500px;
+}
+
+.eventDetails_box {
+  margin: auto;
+  width: 400px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.eventWindow_nameInput,
+.callendar-box {
+  display: flex;
+}
+
+.eventDetails_notConfirmation, .eventDetails_Confirmation {
+  transform: translateY(16px);
+  margin-left: 10px;
+}
+
+.callendar_clickedDay {
+  font-weight: bold;
+}
+
+.eventDetails_btns {
+  margin: 50px 0;
+}
+
+.callenarBig_box {
+  display: flex;
+}
+
+.calendar-week {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding-inline-start: 0px;
+}
+
+.calendar-week-day {
+  max-width: 57px;
+  width: 100%;
+  text-align: center;
+  color: #525659;
+}
+
+.callendarBig_date {
+  justify-content: center;
+  display: flex;
+}
+
+.calendar-days {
+  margin-top: 10px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding-inline-start: 0px;
+}
+
+.calendar-day {
+  text-align: center;
+  color: #525659;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.calendar-month-arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar-month-year-container {
+  padding: 10px 10px 20px 10px;
+  color: #525659;
+  cursor: pointer;
+}
+
+.calendar-arrow-container {
+  margin-top: -5px;
+}
+
+.calendar-left-arrow,
+.calendar-right-arrow {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #525659;
+}
+
+.calendar-today-button {
+  margin-top: -10px;
+  border-radius: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #525659;
+  padding: 5px 10px;
+}
+
+.calendar-today-button {
+  height: 27px;
+  margin-right: 10px;
+  background-color: #ec7625;
+  color: white;
+}
+
+.calendar-months,
+.calendar-years {
+  flex: 1;
+  border-radius: 10px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #525659;
+  font-size: 15px;
+}
+
+.calendar-day-active {
+  background-color: #ec7625;
+  color: white;
+  border-radius: 50%;
+}
+
+.time {
+  flex: 0 0 85px;
+}
+
+.callendarBig_titleTime {
+  text-align: left;
+}
+
+
+.draw-border {
+
+  box-shadow: inset 0 0 0 4px black;
+  /*border-radius: 12px;*/
+  color: black;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+
+.draw-border:hover {
+  color: red;
+
+}
+
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: red;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  font-family: var(--font-family);
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+
+/*.btn:focus {*/
+/*  outline: 2px dotted #55d7dc;*/
+/*}*/
+
+.eventWindow, .eventDetails {
+  font-family: var(--font-family);
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+}
+
+.eventWindow_box {
+  padding: 20px 0;
+}
+
+.eventWindow_switchBtn {
+  padding-bottom: 2px;
+  border-bottom: 4px solid white;
+  font-size: 15px;
+}
+
+.eventWindow_switchBtn:hover {
+  color: red;
+}
+
+
+.active {
+  color: red !important;
+}
+
+.eventDetails {
+  font-family: var(--font-family);
+  top: 5%;
+}
+
+.eventDetails_nameEdit, .eventDetails_StartTimeEdit, .eventDetails_EndTimeEdit, .eventDetails_locationEdit, .eventDetails_msgTitleEdit, .eventDetails_msgDescEdit, .eventWindow_nameInput, .eventWindow_locationInput, .eventWindow_MessageTitle, .eventWindow_MessageDescription, .eventWindow_emailInput, .eventWindow_startDateInput, .eventWindow_endDateInput {
+  border-radius: 25px;
+  font-family: '8BIT WONDER', sans-serif;
+  padding-left: 10px;
+}
+
+.eventWindow_nameInput, .eventWindow_locationInput, .eventWindow_MessageTitle, .eventWindow_MessageDescription, .eventWindow_emailInput {
+  margin: 5px 0;
+  padding: 5px 0;
+}
+
+.eventWindow_emailInput {
+  width: 185px;
+}
+
+.eventWindow_notificationBox {
+  display: flex;
+}
+
+@media only screen and (max-width: 1500px) {
+  .body {
+    background-image: url("https://gifdb.com/images/high/lavender-cartoon-clouds-background-u7w65rqbor29e7wi.gif");
+    background-size: 100% 100%;
+  }
+
+  .callendar-box {
+    display: block;
+  }
+
+  .calendar-container {
+    margin: auto;
+
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  :root {
+    --h1-title-font-size: 40px;
+    --week-day-font-size: 12px;
+    --font-family: '8BIT WONDER', sans-serif;
+    --font-size-active-event: 9px;
+  }
+
+  .callendar-box {
+    display: block;
+  }
+
+  .calendar-container {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --h1-title-font-size: 32px;
+    --week-day-font-size: 10px;
+    --font-family: '8BIT WONDER', sans-serif;
+    --font-size-active-event: 9px;
+    --event-font-size: 11px;
+  }
+
+  .callendar-box {
+    display: block;
+  }
+
+  .calendar-container {
+    margin: auto;
+  }
+
+  .time {
+    flex: 0 0 45px
+  }
+
+  .calendar-container {
+    font-size: 8px;
+  }
+
+  .event_btnBox {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --h1-title-font-size: 32px;
+    --week-day-font-size: 9px;
+    --font-family: '8BIT WONDER', sans-serif;
+    --font-size-active-event: 9px;
+    --event-font-size: 11px;
+  }
+
+  .callendar-box {
+    display: block;
+  }
+
+  .calendar-container {
+    margin: auto;
+  }
+
+  .time {
+    flex: 0 0 45px
+  }
+
+  .calendar-container {
+    font-size: 8px;
+  }
+
+  .event_btnBox {
+    text-align: center;
+  }
+
+  .time {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --h1-title-font-size: 32px;
+    --week-day-font-size: 9px;
+    --font-family: '8BIT WONDER', sans-serif;
+    --font-size-active-event: 9px;
+    --event-font-size: 11px;
+  }
+
+  .callendar-box {
+    display: block;
+  }
+
+  .calendar-container {
+    margin: auto;
+  }
+
+  .time {
+    flex: 0 0 45px
+  }
+
+  .calendar-container {
+    font-size: 8px;
+  }
+
+  .event_btnBox {
+    text-align: center;
+  }
+
+  .time {
+    display: none;
+  }
+
+  .callenarBig_box {
+    display: block;
+  }
+
+  .calendar-arrow-container {
+    width: 140px;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .calendar-right-arrow {
+    transform: translateX(5px);
+    margin-top: 5px;
+  }
+
+  .calendar-left-arrow {
+    margin-top: 5px;
+    transform: translateX(-9px);
+  }
+
+  .calendar-month-year-container {
+    padding-top: 0px;
+  }
+
+  .calendar-month-year-container {
+    transform: translateY(-10px);
+  }
+}
+
+
