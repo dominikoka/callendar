@@ -22,7 +22,10 @@ This project implements a Google Calendar application that allows users to creat
 
 -JUnit Tests: Includes comprehensive unit tests using JUnit to ensure code reliability.
 
--Future Synchronization: Planned feature to synchronize events with Google Calendar for seamless integration.
+-feature to synchronize events with Google Calendar for seamless integration.
+
+-dark/white mode
+![img1](img1.png)
 
 
 ## Future Enhancements
