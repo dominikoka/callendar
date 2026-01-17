@@ -29,7 +29,6 @@ This project implements a Google Calendar application that allows users to creat
 
 
 ## Future Enhancements
--Google Calendar Synchronization: Implement synchronization with Google Calendar API.
 
 -UI Improvements: Enhance user interface for better usability.
 
